@@ -26,3 +26,7 @@ install(TARGETS tofupilot
         INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+
+# Add examples
+add_executable(basic_example examples/basic_usage.cpp)
+target_link_libraries(basic_example PRIVATE tofupilot)
